@@ -1,7 +1,6 @@
-#!/usr/bin/pytho3
-for r in range(100):
-    if r == 99:
-        print("{:d}".format(r))
+#!/usr/bin/python3
+for i in range(100):
+    if i == 99:
+        print('{:d}'.format(i))
     else:
-        print("{:d}".format(r).zfill(2), end=", ")
-
+        print('{:d}'.format(i).zfill(2), end=', ')
