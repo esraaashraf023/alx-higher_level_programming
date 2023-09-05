@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for i in range(100):
-    if i == 99:
-        print('{:d}'.format(i))
-    else:
-        print('{:d}'.format(i).zfill(2), end=', ')
+for i in range(0, 10):
+    for j in range(i + 1, 10):
+        if i < 8:
+            print("{}{}".format(i, j), end=", ")
+        else:
+            print("{}{}".format(i, j))
