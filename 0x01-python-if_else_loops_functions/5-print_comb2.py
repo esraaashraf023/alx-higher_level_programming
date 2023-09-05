@@ -1,6 +1,7 @@
-#!/usr/bin/pytho
-for k in range (100):
-    if k == 99:
-        print("{:d}".format(k))
+#!/usr/bin/pytho3
+for r in range(100):
+    if r == 99:
+        print("{:d}".format(r))
     else:
-        print("{:d}".format(k).zfill(2), end=", ")
+        print("{:d}".format(r).zfill(2), end=", ")
+
