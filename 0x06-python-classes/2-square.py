@@ -4,6 +4,8 @@
 
 class Squares:
     """a Class Square"""
+
+
     def __init__(self, size=0):
         """Instantiation a square"""
         if int(size) > -1 and size == int(size):
