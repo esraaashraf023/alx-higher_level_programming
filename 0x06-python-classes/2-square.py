@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""that defines a square """
+"""that defines a square"""
 
 
-class Squares:
+class Square:
     """a Class Square"""
-
 
     def __init__(self, size=0):
         """Instantiation a square"""
@@ -12,4 +11,4 @@ class Squares:
             self.__size = size
         else:
             raise TypeError("size must be an integer")
-        raise ValueError("size must be >= 0")
+            raise ValueError("size must be >= 0")
