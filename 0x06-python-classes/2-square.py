@@ -3,10 +3,10 @@
 
 
 class Square:
-    """a Class Square"""
+    """ only squares integers """
 
     def __init__(self, size=0):
-        """Instantiation a square"""
+        """ Exeptions to not integers """
         if int(size) > -1 and size == int(size):
             self.__size = size
         else:
