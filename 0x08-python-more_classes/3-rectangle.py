@@ -48,9 +48,7 @@ class Rectangle:
         return 2 * (self.width + self.height) \
             if self.width != 0 and self.height != 0 else 0
 
-     def __str__(self):
+    def __str__(self):
         """Returns a string representation"""
-        if self.width == 0 or self.height == 0:
-            return ""
-        else:
-            return "\n".join(["#" * self.width] * self.height)
+        return '\n'.join(['#' * self.__width] * self.__height
+                         if self.__height != 0 and self.__width != 0 else '')
