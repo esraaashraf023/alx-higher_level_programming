@@ -3,8 +3,8 @@
 
 
 class BaseGeometry:
-    """A base class"""
+    """A base class for geometric shapes"""
 
     def area(self):
-        """The geometric shape"""
+        """Calculates the area of the geometric shape"""
         raise Exception("area() is not implemented")
