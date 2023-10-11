@@ -4,8 +4,6 @@
 
 class Student:
     """Define class"""
-
-
     def __init__(self, first_name, last_name, age):
         """Initialization of class"""
         self.first_name = first_name
@@ -18,3 +16,8 @@ class Student:
                 all(type(element) == str for element in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
+     def reload_from_json(self, json):
+        """Replaces all attributes of the Student instance"""
+        for key, value in json.items():
+            setattr(self, key, value)
