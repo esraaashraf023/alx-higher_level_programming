@@ -72,20 +72,30 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-        def area(self):
-             """calulates of the reectangle"""
-             return self.width * self.height
+     def area(self):
+        """Returns the area value of the Rectangle instance"""
+        return self.width * self.height
 
-         def display(self):
-             """display"""
-             for _ in range(self.y):
-                 print()
-                 for _ in range(self.height):
-                     print(" " * self.x, end="")
-                     print("#" * self.wight)
+    def display(self):
+        """Prints"""
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
-        def __str__(self):
-            """it returns id"""
-            return "[Rectangle] ({}) {}/{}".format(
-                    self.id, self.x, self.width, self.height
-                    )
+    def __str__(self):
+        """Returns"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
+
+    def update(self, *args, **kwargs):
+        """argument"""
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
