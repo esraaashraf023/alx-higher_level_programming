@@ -2,4 +2,4 @@
 
 const args = process.argv;
 
-console.log(args[1] + ' is ' + args[2]);
+console.log(args[2] + ' is ' + args[3]);
