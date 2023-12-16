@@ -23,11 +23,11 @@ if __name__ == "__main__":
                 WHERE states.name LIKE BINARY '{:s}'
                 ORDER BY states.id
             """.format(sys.argv[4])
-    cur.execute(query)
+    cursor.execute(query)
 
-    rows = cur.fetchall()
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
 
-    cur.close()
+    cursor.close()
     db.close()
