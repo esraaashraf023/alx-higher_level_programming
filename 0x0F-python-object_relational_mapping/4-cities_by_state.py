@@ -15,7 +15,7 @@ if __name__ == "__main__":
         passwd=password, db=database, port=3306
     )
 
-    cur = db.cursor()
+    cursor = db.cursor()
 
     query = """
         SELECT cities.id, cities.name, states.name
