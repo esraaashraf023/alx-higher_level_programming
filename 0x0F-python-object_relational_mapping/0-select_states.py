@@ -9,16 +9,19 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    #connect to SQL databas.
+    # connect to SQL databas.
     db = MySQLdb.connect(host="localhost", port=3306,
-            user=username, passwd=password, db=database)
+                        user=username, passwd=password, db=database)
+
     cursor = db.cursor()
 
-    #execute to select.
+    # execute to select.
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    #fecthall rows.
-    rows = cursor.fethall()
+
+    # fetch all rows.
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
+
     cursor.close()
     db.close()
