@@ -23,12 +23,12 @@ if __name__ == "__main__":
         INNER JOIN states s ON c.state_id = s.id
         ORDER BY cities.id ASC.
     """
-    cur.execute(query)
+    cursor.execute(query)
 
-    rows = cur.fetchall()
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
 
-    cur.close()
+    cursor.close()
     db.close()
