@@ -24,8 +24,7 @@ if __name__ == "__main__":
     # fetch all rows.
     rows = cursor.fetchall()
     for row in rows:
-        if row[1][0] == 'N':
-            print(row)
+        print(row)
 
     cursor.close()
     db.close()
