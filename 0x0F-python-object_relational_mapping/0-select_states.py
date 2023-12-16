@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-that lists all states from the database hbtn_0e_0_usa
-"""
+"""that lists all states from the database hbtn_0e_0_usa"""
+
 import MySQLdb
 import sys
 
@@ -10,9 +9,11 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-    # connect to SQL databas.
-    db = MySQLdb.connect(host="localhost", port=3306,
-            user=username, passwd=password, db=database)
+    # connect to SQL database.
+    db = MySQLdb.connect(
+        host='localhost', user=username,
+        passwd=password, db=database, port=3306
+        )
 
     cursor = db.cursor()
 
