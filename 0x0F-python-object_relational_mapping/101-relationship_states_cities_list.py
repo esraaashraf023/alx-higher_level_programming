@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that lists all State objects"""
+"""Script that lists all State objectis"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -19,6 +19,7 @@ if __name__ == '__main__':
     # Create a new session
     Session = sessionmaker(bind=engine)
     session = Session()
+
     states = session.query(State).order_by(State.id).all()
 
     # Print the results
