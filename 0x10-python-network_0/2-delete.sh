@@ -1,0 +1,3 @@
+#!/bin/bash
+# This script sends a DELETE...
+curl -sX DELETE "$1"
