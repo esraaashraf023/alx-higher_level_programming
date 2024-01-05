@@ -1,0 +1,3 @@
+#!/bin/bash
+# This script takes in a URL......
+curl -sL "$1"
