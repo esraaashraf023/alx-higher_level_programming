@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a script fetches https://alx-intranet.hbtn.io/status.
+Write a script that fetches https://alx-intranet.hbtn.io/status.
 """
 import urllib.request
 
@@ -11,6 +11,6 @@ if __name__ == '__main__':
         content = response.read()
 
     print("Body response:")
-    print(f"\t- type:{type(content)}")
-    print(f"\t- content:{(content")
-    print(f"\t- utf8 content:(content.decode('UTF-8')"))
+    print(f"\t- type: {type(content)}")
+    print(f"\t- content: {content}")
+    print(f"\t- utf8 content: {content.decode('UTF-8')}")
