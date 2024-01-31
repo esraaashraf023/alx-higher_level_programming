@@ -9,11 +9,11 @@ request.get('https://swapi-api.alx-tools.com/api/films/' + process.argv[2], (err
 	data.characters.map(character => {
 		request.get(character, (err, res, body) => {
 			if (err) {
-				console.error(err);
-				return;
+				return console.error(err);
 			}
 			const name = JSON.parse(body).name;
 			console.log(name);
 		});
+		return 0;
 	});
 });
